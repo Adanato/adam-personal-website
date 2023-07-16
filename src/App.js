@@ -1,31 +1,26 @@
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
+import { Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import HomePage from "./HomePage";
+import About from "./About";
+// const AboutPage = () => <h2>About Page</h2>;
+
 function App() {
   return (
     <>
-      <Header />
-      <NavBar />
-      <Content />
-      <Footer />
+      <div>
+        <h1>This is the home page</h1>
+        <Link to="/">Click to view our about page</Link>
+        <Link to="/about">Click to view our about page</Link>
+        <Link to="contact">Click to view our contact page</Link>
+      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   );
 }
 
 export default App;
-
-function Header() {
-  return <header className="">Adam Nguyen</header>;
-}
-
-function NavBar() {
-  return (
-    <nav className="nav-bar">
-      Links to move around the site but I havent learned the react router yet
-    </nav>
-  );
-}
-
-function Content() {
-  return <div>Hello this is my content</div>;
-}
-function Footer() {
-  return;
-}
