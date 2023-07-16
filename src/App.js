@@ -9,12 +9,12 @@ import About from "./About";
 function App() {
   return (
     <>
-      <div>
+      <nav>
         <h1>This is the home page</h1>
         <Link to="/">Click to view our about page</Link>
         <Link to="/about">Click to view our about page</Link>
         <Link to="contact">Click to view our contact page</Link>
-      </div>
+      </nav>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
