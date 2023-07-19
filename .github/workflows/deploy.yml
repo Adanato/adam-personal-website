@@ -25,22 +25,12 @@ jobs:
       - name: Build Website
         run: npm run build
 
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
+      - name: rsync deployments
+        uses: burnett01/rsync-deployments@6.0.0
         with:
-          key: ${{ secrets.SSH_KEY }}
-          known_hosts: "unnecessary"
-
-      - name: Adding Known Hosts
-        run: ssh-keyscan -H 67.205.191.31 >> ~/.ssh/known_hosts
-
-     - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@main
-       env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY}}
-          ARGS: "-rlgoDzvc -i --delete"
-          SOURCE: "dist/"
-          REMOTE_HOST: 67.205.191.31
-          REMOTE_USER: adam
-          TARGET: /var/www/adamnguyen.dev/html
-          EXCLUDE: "/dist/, /node_modules/"
+          switches: -avzr --delete
+          path: .
+          remote_path: /var/www/html/
+          remote_host: www.adamnguyen.dev
+          remote_user: adam
+          remote_key: ${{ secrets.SSH_KEY }}
