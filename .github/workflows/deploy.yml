@@ -34,5 +34,13 @@ jobs:
       - name: Adding Known Hosts
         run: ssh-keyscan -H 67.205.191.31 >> ~/.ssh/known_hosts
 
-      - name: Deploy with rsync
-        run: rsync . adam@67.205.191.31:/var/www/adamnguyen.dev
+     - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+       env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY}}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: 67.205.191.31
+          REMOTE_USER: adam
+          TARGET: /var/www/adamnguyen.dev/html
+          EXCLUDE: "/dist/, /node_modules/"
