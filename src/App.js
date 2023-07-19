@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom/client";
+//import * as ReactDOM from "react-dom/client";
 import { Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import HomePage from "./HomePage";
