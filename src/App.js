@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <nav>
-        <h1>This is the home page</h1>
+        <h1>HELLO CHECKING IF THE GITHUB ACTIONS WORKS</h1>
         <Link to="/">Click to view our about page</Link>
         <Link to="/about">Click to view our about page</Link>
         <Link to="contact">Click to view our contact page</Link>
