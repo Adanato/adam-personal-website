@@ -22,7 +22,7 @@ function NavBar() {
 }
 
 function Content() {
-  return <div>Hello this is my content</div>;
+  return <div>CHECKING this is my content</div>;
 }
 function Footer() {
   return;
