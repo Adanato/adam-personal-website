@@ -8,13 +8,17 @@ import jsSvg from "../Public/javascript.svg";
 import javaSvg from "../Public/java.svg";
 import pythonSvg from "../Public/python.svg";
 import mongoSvg from "../Public/mongodb.svg";
+
+// Picture imports personal project
+import capybaraPic from "../Public/capybara.jpg";
+import shufflePic from "../Public/dancing.jpg";
+import iphonePic from "../Public/iphone.jpg";
 function HomePage() {
   return (
     <>
       <HeroSection />
       <Skills />
       <FeaturedProjects />
-      <CallToAction />
     </>
   );
 }
@@ -87,8 +91,11 @@ function FeaturedProjects() {
           description="Using MERN Stack, this project aims to create a interactive online community
         built on the love of Capybaras. Taking inspiration from reddit. Project is currently going underway."
         />
-        <ProjectImage alt="picture of capybaras by the river" />
-        <ProjectImage alt="picture of someone shuffling" />
+        <ProjectImage
+          src={capybaraPic}
+          alt="picture of capybaras by the river"
+        />
+        <ProjectImage src={shufflePic} alt="picture of someone shuffling" />
         <ProjectCard
           title="ShuffleVT.com"
           description="Bringing my passion for shuffling to life, a webpage featuring 
@@ -101,7 +108,7 @@ function FeaturedProjects() {
           can do leading to a stale freestyle dance. This app hopes to assist with that by 
           providing a deck of moves that 'shuffles' what move the user should do next."
         />
-        <ProjectImage alt="picture of a project" />
+        <ProjectImage src={iphonePic} alt="picture of a project" />
       </div>
     </section>
   );
@@ -117,10 +124,10 @@ function ProjectCard({ title, description }) {
   );
 }
 
-function ProjectImage({ alt }) {
+function ProjectImage({ src, alt }) {
   return (
     <div>
-      <img src="" alt={alt} />
+      <img className="project-img" src={src} alt={alt} />
     </div>
   );
 }
@@ -128,27 +135,5 @@ function ProjectImage({ alt }) {
 //------------------------
 // Experience Section
 //------------------------
-
-//------------------------
-// Call-To-Action Section
-//------------------------
-// Hit them with the hire me now
-function CallToAction() {
-  return (
-    <section className="section-cta">
-      <div className="cta-container">
-        <h2>Contacts</h2>
-        <ul>
-          <li>
-            <a href="linked.com/in/adanato">LinkedIn </a>
-          </li>
-          <li>
-            <a href="mailto: adanato@vt.edu">Email Me</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  );
-}
 
 export default HomePage;
