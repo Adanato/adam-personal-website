@@ -1,7 +1,5 @@
-import React from "react";
-
 function ContactPage() {
-  return;
+  return <section>Hello find me at Linkedin and Github</section>;
 }
 
 export default ContactPage;
