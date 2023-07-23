@@ -72,12 +72,5 @@ function ProjectCard() {
 function CallToAction() {
   return <p>sd</p>;
 }
-function Footer() {
-  return (
-    <footer className="footer">
-      <span>&copy; 2023 Adam Nguyen. All rights reserved.</span>
-      <div className="social-media"></div>
-    </footer>
-  );
-}
+
 export default HomePage;

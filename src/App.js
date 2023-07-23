@@ -10,6 +10,7 @@ import Contact from "./Pages/ContactPage";
 
 // Common component
 import Header from "./Shared/Header";
+import Footer from "./Shared/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </>
   );
