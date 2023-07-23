@@ -11,7 +11,7 @@ function Hero() {
   return (
     <div className="section-hero">
       <div className="hero-content"></div>
-      <img />
+      <img alt="Adam Nguyen, the developer of this website" />
     </div>
   );
 }
