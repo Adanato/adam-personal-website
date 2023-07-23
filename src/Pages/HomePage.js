@@ -140,10 +140,10 @@ function CallToAction() {
         <h2>Contacts</h2>
         <ul>
           <li>
-            <a>LinkedIn </a>
+            <a href="linked.com/in/adanato">LinkedIn </a>
           </li>
           <li>
-            <a>Email</a>
+            <a href="mailto: adanato@vt.edu">Email Me</a>
           </li>
         </ul>
       </div>
