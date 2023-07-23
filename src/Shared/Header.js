@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function Header() {
   return (
     <header className="main-header">
       <Link className="nav-link" to="/">
@@ -29,21 +29,26 @@ function NavBar() {
           AdamNguyen.Dev
         </div>
       </Link>
-
-      <nav className="main-nav">
-        <Link className="nav-link" to="/">
-          Home
-        </Link>
-        <Link className="nav-link" to="/about">
-          About
-        </Link>
-
-        <Link className="nav-link nav-contact-button" to="contact">
-          Contact
-        </Link>
-      </nav>
+      <NavBar />
     </header>
   );
 }
-
-export default NavBar;
+function NavBar() {
+  return (
+    <nav className="main-nav">
+      <Link className="nav-link" to="/">
+        Home
+      </Link>
+      <Link className="nav-link" to="/resume">
+        Resume
+      </Link>
+      <Link className="nav-link" to="/about">
+        About
+      </Link>
+      <Link className="nav-link nav-contact-button" to="/contact">
+        Contact
+      </Link>
+    </nav>
+  );
+}
+export default Header;

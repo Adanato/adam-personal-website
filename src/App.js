@@ -2,19 +2,26 @@ import * as React from "react";
 //import * as ReactDOM from "react-dom/client";
 import { Routes, Route } from "react-router-dom";
 
-import HomePage from "./HomePage";
-import About from "./About";
+// Pages
+import Home from "./Pages/HomePage";
+import About from "./Pages/AboutPage";
+import Resume from "./Pages/ResumePage";
+import Contact from "./Pages/ContactPage";
 
-import NavBar from "./Shared/NavBar";
+// Common component
+import Header from "./Shared/Header";
+
 function App() {
   return (
     <>
       <div className="root-container">
-        <NavBar />
+        <Header />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </>
