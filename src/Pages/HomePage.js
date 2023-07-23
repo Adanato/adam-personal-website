@@ -1,5 +1,13 @@
 import React from "react";
 import file from "../Public/Headshot_Placeholder.jpg";
+
+// SVG file imports
+import htmlSvg from "../Public/html.svg";
+import cssSvg from "../Public/css3.svg";
+import jsSvg from "../Public/javascript.svg";
+import javaSvg from "../Public/java.svg";
+import pythonSvg from "../Public/python.svg";
+import mongoSvg from "../Public/mongodb.svg";
 function HomePage() {
   return (
     <>
@@ -36,15 +44,30 @@ function HeroSection() {
 function Skills() {
   return (
     <section className="section-skills">
-      <h2>Here are my skills</h2>
+      <h2>Skills</h2>
 
       <ul className="skill-list">
-        <li>Javascript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Java</li>
-        <li>Python</li>
-        <li>C</li>
+        <li>
+          <img src={jsSvg} alt="javascript SVG logo" />
+          Javascript
+        </li>
+        <li>
+          <img src={htmlSvg} alt="mongoDb SVG logo" />
+          HTML
+        </li>
+        <li>
+          <img src={cssSvg} alt="mongoDb SVG logo" />
+          CSS
+        </li>
+        <li>
+          <img src={javaSvg} alt="mongoDb SVG logo" /> Java
+        </li>
+        <li>
+          <img src={pythonSvg} alt="mongoDb SVG logo" /> Python
+        </li>
+        <li>
+          <img src={mongoSvg} alt="mongoDb SVG logo" /> MongoDB
+        </li>
       </ul>
     </section>
   );
@@ -57,27 +80,39 @@ function Skills() {
 function FeaturedProjects() {
   return (
     <section className="section-projects">
+      <h2>Personal projects</h2>
       <div className="projects-container">
-        <ProjectCard />
-        <ProjectImage />
-        <ProjectImage />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectImage />
+        <ProjectCard
+          title="CapybaraSpace.com"
+          description="Using MERN Stack, this project aims to create a interactive online community
+        built on the love of Capybaras. Taking inspiration from reddit. Project is currently going underway."
+        />
+        <ProjectImage alt="picture of capybaras by the river" />
+        <ProjectImage alt="picture of someone shuffling" />
+        <ProjectCard
+          title="ShuffleVT.com"
+          description="Bringing my passion for shuffling to life, a webpage featuring 
+          dance videos and a call-to-action that motivates fellow hokies to join the club."
+        />
+        <ProjectCard
+          title="Shuffle Trainer Ios App"
+          description="At a fast bpm, dance creativity drops drastically as the human brain 
+          prioritizes the most efficient dance moves. This limits the variety of moves a user 
+          can do leading to a stale freestyle dance. This app hopes to assist with that by 
+          providing a deck of moves that 'shuffles' what move the user should do next."
+        />
+        <ProjectImage alt="picture of a project" />
       </div>
     </section>
   );
 }
 
-function ProjectCard() {
+function ProjectCard({ title, description }) {
   return (
     <div className="project-card">
-      <h2>Project Title</h2>
+      <h3>{title}</h3>
 
-      <ul>
-        <li>React</li>
-        <li>Javascript</li>
-      </ul>
+      <p>{description}</p>
     </div>
   );
 }
@@ -85,10 +120,14 @@ function ProjectCard() {
 function ProjectImage({ alt }) {
   return (
     <div>
-      <img src="" alt="displays the relevant project" /> Place holder{" "}
+      <img src="" alt={alt} />
     </div>
   );
 }
+
+//------------------------
+// Experience Section
+//------------------------
 
 //------------------------
 // Call-To-Action Section
@@ -96,7 +135,19 @@ function ProjectImage({ alt }) {
 // Hit them with the hire me now
 function CallToAction() {
   return (
-    <div className="cta-container">Insert text and super cool button here</div>
+    <section className="section-cta">
+      <div className="cta-container">
+        <h2>Contacts</h2>
+        <ul>
+          <li>
+            <a>LinkedIn </a>
+          </li>
+          <li>
+            <a>Email</a>
+          </li>
+        </ul>
+      </div>
+    </section>
   );
 }
 

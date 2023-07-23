@@ -15,7 +15,7 @@ import Footer from "./Shared/Footer";
 function App() {
   return (
     <>
-      <div className="root-container">
+      <main className="root-container">
         <Header />
 
         <Routes>
@@ -25,7 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
-      </div>
+      </main>
     </>
   );
 }

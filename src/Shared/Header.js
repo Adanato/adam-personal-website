@@ -15,7 +15,7 @@ function Header() {
           >
             <defs>
               <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#1971c2" />
+                <stop offset="0%" stop-color="#3b5bdb" />
                 <stop offset="100%" stop-color="#845ef7" />
               </linearGradient>
             </defs>
@@ -39,14 +39,14 @@ function NavBar() {
       <Link className="nav-link" to="/">
         Home
       </Link>
-      <Link className="nav-link" to="/resume">
-        Resume
-      </Link>
       <Link className="nav-link" to="/about">
         About
       </Link>
-      <Link className="nav-link nav-contact-button" to="/contact">
+      <Link className="nav-link" to="/contact">
         Contact
+      </Link>
+      <Link className="nav-link nav-contact-button" to="/resume">
+        Resume
       </Link>
     </nav>
   );

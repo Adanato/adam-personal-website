@@ -12,11 +12,11 @@ Bold: 700
 
 
 ---Colors
-main: #1971c2
+main: #3b5bdb
 secondary: #343a40, #555;
 accent: #845ef7
 tint
-shade
+shade: #5f3dc4 #364fc7
 
 
 --- 07 WHITESPACE
@@ -51,8 +51,9 @@ body {
 .root-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
   min-height: 100vh;
-  gap: 3.2rem;
+  gap: 16rem;
 }
 
 a {
@@ -78,7 +79,6 @@ a {
 
   /* Container  */
   padding: 2.4rem;
-  margin-bottom: 8.2rem;
 }
 
 .header-container {
@@ -129,43 +129,65 @@ a {
   grid-template-columns: 1fr 1fr;
 
   /* background-color: #bac8ff; */
-  max-width: 120rem;
-  margin: 0 auto;
 }
 .hero-content {
+  max-width: 130rem;
+  margin: 0 auto;
 }
 .hero-img {
-  max-width: 32rem;
+  width: 50%;
   border-radius: 50%;
 }
 /* ------------------------------ */
 /* Skills Section */
 /* ------------------------------ */
+
 .section-skills {
-  width: 120rem;
-  margin: 0 auto;
+  width: 100%; /* Use all available width */
+  background-color: #dbe4ff;
 }
+
 .skill-list {
+  max-width: 130rem; /* But don't get bigger than 130rem */
+  margin: 0 auto; /* Center the section in its container */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 20rem 20rem;
+  grid-template-rows: 10rem 10rem;
+  align-items: center;
+
+  gap: 1.6rem;
+
   list-style: none;
-  background-color: red;
+}
+
+.skill-list li {
+  padding: 10px;
+  width: 100%;
+}
+
+.skill-list li img {
+  height: 4rem;
 }
 
 /* ------------------------------ */
 /* Projects Section */
 /* ------------------------------ */
+.section-project {
+}
 .projects-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 20rem 20rem 20rem;
+
+  max-width: 130rem;
+  margin: 0 auto;
 }
 /* ------------------------------ */
 /* Footer Section */
 /* ------------------------------ */
 .footer {
-  background-color: #343a40;
+  /* Gradient from blue (#0000FF) to purple (#800080), bottom left to top right */
+  background: linear-gradient(to bottom right, #364fc7, #5f3dc4);
   color: #fff;
   padding: 3rem;
   width: 100%;
