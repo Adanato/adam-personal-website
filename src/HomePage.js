@@ -1,24 +1,50 @@
+import file from "./Headshot_Placeholder.jpg";
 function HomePage() {
   return (
     <>
-      <Hero />
+      <HeroSection />
+      <Skills />
       <Footer />
     </>
   );
 }
 
-function Hero() {
+// Little Introduction
+function HeroSection() {
   return (
-    <div className="section-hero">
+    <section className="section-hero">
       <div className="hero-content">
-        Hi, I'm Adam Nguyen. I'm a sophmore at Virginia Tech and I'm majoring in
-        Computer Science.
+        <h1 className="hero-h1">Hi, I'm Adam Nguyen!</h1>
       </div>
-      <img alt="Adam Nguyen, the developer of this website" />
-    </div>
+      <img
+        className="hero-img"
+        src={file}
+        alt="Adam Nguyen, the developer of this website"
+      />
+    </section>
+  );
+}
+// Contains my skills from my resume
+function Skills() {
+  return (
+    <section>
+      <h2>Here are my skills</h2>
+      <ul>
+        <li>Javascript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Java</li>
+        <li></li>
+      </ul>
+    </section>
   );
 }
 function Footer() {
-  return;
+  return (
+    <footer className="footer">
+      <span>Adam Nguyen Footer</span>
+      <div className="social-media"></div>
+    </footer>
+  );
 }
 export default HomePage;

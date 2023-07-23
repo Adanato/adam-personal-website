@@ -48,6 +48,11 @@ body {
   color: #343a40;
   font-size: 2rem;
 }
+.root-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 a {
   text-decoration: none;
@@ -71,6 +76,7 @@ a {
 
   /* Container  */
   padding: 2.4rem;
+  margin-bottom: 9.8rem;
 }
 
 .header-container {
@@ -119,7 +125,26 @@ a {
   max-width: 120rem;
   /* Positioning */
   grid-template-columns: 1fr 1fr;
-  background-color: #bac8ff;
+  /* background-color: #bac8ff; */
 
   margin: 0 auto;
+}
+.hero-content {
+}
+.hero-img {
+  max-width: 32rem;
+  border-radius: 50%;
+}
+
+/* ------------------------------ */
+/* Hero Section */
+/* ------------------------------ */
+.footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 3rem;
+  width: 100%;
+
+  /* Keeps the footer at the bottom */
+  margin-top: auto;
 }

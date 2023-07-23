@@ -1,5 +1,12 @@
 import React from "react";
 
 export default function About() {
-  return <p>More aobut me</p>;
+  return (
+    <p>
+      I'm a Sophmore at Virginia Tech, and I'm a double major in Computer
+      Science & Mathematics. I'd look forward to working in internship at your
+      company. Determined and Hardworking, I hope to contribute a lot to your
+      company.
+    </p>
+  );
 }
