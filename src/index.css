@@ -52,6 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  gap: 3.2rem;
 }
 
 a {
@@ -77,7 +78,7 @@ a {
 
   /* Container  */
   padding: 2.4rem;
-  margin-bottom: 9.8rem;
+  margin-bottom: 8.2rem;
 }
 
 .header-container {
@@ -123,11 +124,12 @@ a {
 /* ------------------------------ */
 .section-hero {
   display: grid;
-  max-width: 120rem;
+
   /* Positioning */
   grid-template-columns: 1fr 1fr;
-  /* background-color: #bac8ff; */
 
+  /* background-color: #bac8ff; */
+  max-width: 120rem;
   margin: 0 auto;
 }
 .hero-content {
@@ -136,9 +138,31 @@ a {
   max-width: 32rem;
   border-radius: 50%;
 }
+/* ------------------------------ */
+/* Skills Section */
+/* ------------------------------ */
+.section-skills {
+  width: 120rem;
+  margin: 0 auto;
+}
+.skill-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 20rem 20rem;
+  list-style: none;
+  background-color: red;
+}
 
 /* ------------------------------ */
-/* Hero Section */
+/* Projects Section */
+/* ------------------------------ */
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20rem 20rem 20rem;
+}
+/* ------------------------------ */
+/* Footer Section */
 /* ------------------------------ */
 .footer {
   background-color: #343a40;
