@@ -1,28 +1,19 @@
 function HomePage() {
   return (
     <>
-      <Header />
-      <NavBar />
-      <Content />
+      <Hero />
       <Footer />
     </>
   );
 }
 
-function Header() {
-  return <header className="">Adam Nguyen</header>;
-}
-
-function NavBar() {
+function Hero() {
   return (
-    <nav className="nav-bar">
-      Links to move around the site but I havent learned the react router yet
-    </nav>
+    <div className="section-hero">
+      <div className="hero-content"></div>
+      <img />
+    </div>
   );
-}
-
-function Content() {
-  return <div>CHECKING this is my content</div>;
 }
 function Footer() {
   return;
