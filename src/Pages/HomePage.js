@@ -7,7 +7,6 @@ function HomePage() {
       <Skills />
       <FeaturedProjects />
       <CallToAction />
-      <Footer />
     </>
   );
 }

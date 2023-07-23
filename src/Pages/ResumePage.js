@@ -12,7 +12,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 function ResumePage() {
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+
   function onDocumentSuccess() {
     setNumPages(numPages);
   }
@@ -30,7 +30,7 @@ function ResumePage() {
       Last updated: July 2023
       <Document file={pdf} onLoadSuccess={onDocumentSuccess}>
         <Page
-          pageNumber={pageNumber}
+          pageNumber={1}
           renderTextLayer={false}
           renderAnnotationLayer={false}
         />
