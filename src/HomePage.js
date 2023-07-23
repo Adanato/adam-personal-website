@@ -10,7 +10,10 @@ function HomePage() {
 function Hero() {
   return (
     <div className="section-hero">
-      <div className="hero-content"></div>
+      <div className="hero-content">
+        Hi, I'm Adam Nguyen. I'm a sophmore at Virginia Tech and I'm majoring in
+        Computer Science.
+      </div>
       <img alt="Adam Nguyen, the developer of this website" />
     </div>
   );

@@ -24,7 +24,9 @@ shade
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
-
+/* ------------------------------ */
+/* General*/
+/* ------------------------------ */
 /* Global reset */
 * {
   margin: 0;
@@ -44,10 +46,16 @@ body {
   line-height: 1;
   font-weight: 500;
   color: #343a40;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
+a {
+  text-decoration: none;
+  color: #343a40;
+}
+/* ------------------------------ */
 /* Header */
+/* ------------------------------ */
 .svg-icon {
   width: 5rem;
 }
@@ -58,19 +66,60 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 20px;
+  /* Inheritance */
+  font-size: 4.4rem;
+
+  /* Container  */
+  padding: 2.4rem;
 }
 
-.main-nav-container {
+.header-container {
   display: flex;
+
+  /* Positioning */
+  align-items: center;
+  gap: 2.4rem;
+  /* Container */
+  padding: 1rem;
+}
+.header-container a:-webkit-any-link {
+  text-decoration: none;
+  color: #343a40;
+}
+.main-nav {
+  display: flex;
+
+  /* Positioning */
+  gap: 4.8rem;
+
+  font-size: 1.8rem;
+
+  /* Container */
+  align-items: center;
 }
 .main-nav a:-webkit-any-link {
   text-decoration: none;
-  color: red;
+  color: #343a40;
 }
 
+/* Emphasis on contact button */
+.main-nav a:-webkit-any-link:last-child {
+  text-decoration: none;
+  padding: 1rem;
+  color: #fff;
+  background-color: #845ef7;
+  border-radius: 1rem;
+}
+
+/* ------------------------------ */
 /* Hero Section */
+/* ------------------------------ */
 .section-hero {
-  background-color: #1971c2;
-  max-width: 100rem;
+  display: grid;
+  max-width: 120rem;
+  /* Positioning */
+  grid-template-columns: 1fr 1fr;
+  background-color: #bac8ff;
+
+  margin: 0 auto;
 }
