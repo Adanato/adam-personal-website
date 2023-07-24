@@ -125,22 +125,24 @@ a {
 /* ------------------------------ */
 .section-hero {
   display: grid;
-
+  max-width: 130rem;
   /* Positioning */
   grid-template-columns: 1fr 1fr;
-
+  margin: 0 auto;
   /* background-color: #bac8ff; */
   padding: 3.2rem;
 
   box-shadow: 0px 20px 10px -10px rgba(0, 0, 0, 0.1);
 }
 .hero-content {
-  max-width: 130rem;
-  margin: 0 auto;
+}
+h1 {
+  font-size: 5.4rem;
 }
 .hero-img {
   width: 50%;
   border-radius: 50%;
+  justify-self: center;
 }
 /* ------------------------------ */
 /* Skills Section */

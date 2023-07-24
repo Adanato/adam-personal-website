@@ -31,7 +31,14 @@ function HeroSection() {
     <section className="section-hero">
       <div className="hero-content">
         <h1 className="hero-h1">Hi, I'm Adam Nguyen!</h1>
-        <p>Virginia Tech Computer Science Major striving for</p>
+        <p className="hero-paragraph">
+          An Honors Sophomore at Virginia Tech studying Computer Science &
+          Mathematics with a 4.0 GPA. I enjoy coding in various languages and
+          have built multiple web projects using frameworks like React and
+          Node.js. Beyond academics, I mentor incoming students, lead a Shuffle
+          Dance club, and love engaging with the capybara community on
+          Instagram.
+        </p>
       </div>
       <img
         className="hero-img"
