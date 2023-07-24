@@ -56,31 +56,33 @@ function HeroSection() {
 function Skills() {
   return (
     <section className="section-skills">
-      <h2>Skills</h2>
+      <div className="skills-container">
+        <h2>Skills</h2>
 
-      <ul className="skill-list">
-        <li>
-          <img src={jsSvg} alt="javascript SVG logo" />
-          Javascript
-        </li>
-        <li>
-          <img src={htmlSvg} alt="html SVG logo" />
-          HTML
-        </li>
-        <li>
-          <img src={cssSvg} alt="css SVG logo" />
-          CSS
-        </li>
-        <li>
-          <img src={javaSvg} alt="java SVG logo" /> Java
-        </li>
-        <li>
-          <img src={pythonSvg} alt="python SVG logo" /> Python
-        </li>
-        <li>
-          <img src={mongoSvg} alt="mongo SVG logo" /> MongoDB
-        </li>
-      </ul>
+        <ul className="skill-list">
+          <li>
+            <img src={jsSvg} alt="javascript SVG logo" />
+            Javascript
+          </li>
+          <li>
+            <img src={htmlSvg} alt="html SVG logo" />
+            HTML
+          </li>
+          <li>
+            <img src={cssSvg} alt="css SVG logo" />
+            CSS
+          </li>
+          <li>
+            <img src={javaSvg} alt="java SVG logo" /> Java
+          </li>
+          <li>
+            <img src={pythonSvg} alt="python SVG logo" /> Python
+          </li>
+          <li>
+            <img src={mongoSvg} alt="mongo SVG logo" /> MongoDB
+          </li>
+        </ul>
+      </div>
     </section>
   );
 }

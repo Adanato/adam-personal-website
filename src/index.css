@@ -133,8 +133,8 @@ a {
 /* ------------------------------ */
 .section-hero {
   /* Positioning */
-
-  padding: 3.2rem;
+  margin-bottom: 16rem;
+  padding: 6.4rem 0;
 
   box-shadow: 0px 20px 10px -10px rgba(0, 0, 0, 0.1);
 }
@@ -153,7 +153,7 @@ a {
   letter-spacing: -0.1rem;
 }
 .hero-paragraph {
-  line-height: rem;
+  line-height: 4rem;
 }
 .hero-img {
   width: 50%;
@@ -167,17 +167,20 @@ a {
 .section-skills {
   width: 100%; /* Use all available width */
   /* background-color: #dbe4ff; */
+  margin-bottom: 17.6rem;
 }
 .skills-container {
+  max-width: 130rem; /* But don't get bigger than 130rem */
+  margin: 0 auto;
 }
 .skill-list {
-  max-width: 130rem; /* But don't get bigger than 130rem */
-  margin: 0 auto; /* Center the section in its container */
+  /* Center the section in its container */
+
+  /* CSS GRID */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 10rem 10rem;
   align-items: center;
-
   gap: 3.2rem;
 
   list-style: none;
