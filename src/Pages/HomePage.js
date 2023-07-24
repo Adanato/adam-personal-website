@@ -29,22 +29,23 @@ function HomePage() {
 function HeroSection() {
   return (
     <section className="section-hero">
-      <div className="hero-content">
-        <h1 className="hero-h1">Hi, I'm Adam Nguyen!</h1>
-        <p className="hero-paragraph">
-          An Honors Sophomore at Virginia Tech studying Computer Science &
-          Mathematics with a 4.0 GPA. I enjoy coding in various languages and
-          have built multiple web projects using frameworks like React and
-          Node.js. Beyond academics, I mentor incoming students, lead a Shuffle
-          Dance club, and love engaging with the capybara community on
-          Instagram.
-        </p>
+      <div className="hero-container">
+        <div className="hero-content">
+          <h1 className="hero-h1">Hi, I'm Adam Nguyen!</h1>
+          <p className="hero-paragraph">
+            A Computer Science Sophomore at Virginia Tech, with hands-on
+            experience in JavaScript, HTML, CSS and web development frameworks.
+            I've built multiple web projects, including my portfolio and a
+            capybara-themed social media site. Beyond coding, I spend time
+            practicing new dance moves for my Shuffling Club.
+          </p>
+        </div>
+        <img
+          className="hero-img"
+          src={file}
+          alt="Adam Nguyen, the developer of this website"
+        />
       </div>
-      <img
-        className="hero-img"
-        src={file}
-        alt="Adam Nguyen, the developer of this website"
-      />
     </section>
   );
 }
@@ -63,21 +64,21 @@ function Skills() {
           Javascript
         </li>
         <li>
-          <img src={htmlSvg} alt="mongoDb SVG logo" />
+          <img src={htmlSvg} alt="html SVG logo" />
           HTML
         </li>
         <li>
-          <img src={cssSvg} alt="mongoDb SVG logo" />
+          <img src={cssSvg} alt="css SVG logo" />
           CSS
         </li>
         <li>
-          <img src={javaSvg} alt="mongoDb SVG logo" /> Java
+          <img src={javaSvg} alt="java SVG logo" /> Java
         </li>
         <li>
-          <img src={pythonSvg} alt="mongoDb SVG logo" /> Python
+          <img src={pythonSvg} alt="python SVG logo" /> Python
         </li>
         <li>
-          <img src={mongoSvg} alt="mongoDb SVG logo" /> MongoDB
+          <img src={mongoSvg} alt="mongo SVG logo" /> MongoDB
         </li>
       </ul>
     </section>

@@ -27,6 +27,11 @@ shade: #5f3dc4 #364fc7
 /* ------------------------------ */
 /* General*/
 /* ------------------------------ */
+/* Global CSS variables */
+:root {
+  --main-bg-color: coral;
+}
+
 /* Global reset */
 * {
   margin: 0;
@@ -50,13 +55,16 @@ body {
   overflow-x: hidden;
 }
 .root-container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  gap: 12.8rem;
+}
+h1 {
+  font-size: 5.4rem;
 }
 
+h2 {
+  font-size: 4.4rem;
+}
 a {
   text-decoration: none;
   color: #343a40;
@@ -124,20 +132,28 @@ a {
 /* Hero Section */
 /* ------------------------------ */
 .section-hero {
-  display: grid;
-  max-width: 130rem;
   /* Positioning */
-  grid-template-columns: 1fr 1fr;
-  margin: 0 auto;
-  /* background-color: #bac8ff; */
+
   padding: 3.2rem;
 
   box-shadow: 0px 20px 10px -10px rgba(0, 0, 0, 0.1);
 }
-.hero-content {
+.hero-container {
+  max-width: 130rem;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  margin: 0 auto;
 }
-h1 {
-  font-size: 5.4rem;
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.hero-content h1 {
+  letter-spacing: -0.1rem;
+}
+.hero-paragraph {
+  line-height: rem;
 }
 .hero-img {
   width: 50%;
@@ -150,9 +166,10 @@ h1 {
 
 .section-skills {
   width: 100%; /* Use all available width */
-  background-color: #dbe4ff;
+  /* background-color: #dbe4ff; */
 }
-
+.skills-container {
+}
 .skill-list {
   max-width: 130rem; /* But don't get bigger than 130rem */
   margin: 0 auto; /* Center the section in its container */
@@ -161,14 +178,19 @@ h1 {
   grid-template-rows: 10rem 10rem;
   align-items: center;
 
-  gap: 1.6rem;
+  gap: 3.2rem;
 
   list-style: none;
 }
 
 .skill-list li {
-  padding: 10px;
+  padding: 2rem;
+  border-left: #3b5bdb solid 1rem;
   width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .skill-list li img {
