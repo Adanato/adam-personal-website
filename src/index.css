@@ -47,13 +47,14 @@ body {
   font-weight: 500;
   color: #343a40;
   font-size: 2rem;
+  overflow-x: hidden;
 }
 .root-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  gap: 16rem;
+  gap: 12.8rem;
 }
 
 a {
@@ -78,7 +79,7 @@ a {
   font-size: 4.4rem;
 
   /* Container  */
-  padding: 2.4rem;
+  padding: 3.2rem;
 }
 
 .header-container {
@@ -88,7 +89,7 @@ a {
   align-items: center;
   gap: 2.4rem;
   /* Container */
-  padding: 1rem;
+  padding: 1.2rem;
 }
 .header-container a:-webkit-any-link {
   text-decoration: none;
@@ -129,6 +130,9 @@ a {
   grid-template-columns: 1fr 1fr;
 
   /* background-color: #bac8ff; */
+  padding: 3.2rem;
+
+  box-shadow: 0px 20px 10px -10px rgba(0, 0, 0, 0.1);
 }
 .hero-content {
   max-width: 130rem;
@@ -172,19 +176,58 @@ a {
 /* ------------------------------ */
 /* Projects Section */
 /* ------------------------------ */
-.section-project {
+.section-projects {
+  background-color: #3b5bdb;
+  background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
 }
 .projects-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 20rem 20rem 20rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30rem 30rem 30rem;
 
+  gap: 6.4rem;
   max-width: 130rem;
   margin: 0 auto;
+  padding: 4.8rem;
+
+  box-shadow: 10px 0px 10px 100x rgba(0, 0, 0, 0.75);
+}
+.project-cards {
+}
+.project-card {
+  background-color: white;
+  display: flex;
+  gap: 3.2rem;
+}
+.project-info {
+  padding: 2.4rem;
+}
+.project-img {
+  max-width: 100%;
+  height: auto;
 }
 
-.project-img {
-  height: 100%;
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+}
+
+.image-container .hover-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .hover-text {
+  opacity: 1;
 }
 /* ------------------------------ */
 /* Footer Section */
@@ -212,4 +255,45 @@ a {
 }
 .footer-links a {
   color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-content {
+    max-width: 60rem;
+  }
+  .skill-list {
+    max-width: 60rem;
+  }
+  .projects-container {
+    max-width: 130rem;
+  }
+}
+
+/* Mobile view */
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 964px) {
+  .main-nav {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Menu open */
+.main-nav.open {
+  display: flex;
+}
+
+@media screen and (max-width: 685px) {
+  .main-header {
+    font-size: 2.4rem;
+  }
+  .header-container {
+    gap: 1.2rem;
+  }
 }

@@ -87,47 +87,53 @@ function FeaturedProjects() {
       <h2>Personal projects</h2>
       <div className="projects-container">
         <ProjectCard
+          src={capybaraPic}
+          alt="picture of capybaras by the river"
           title="CapybaraSpace.com"
           description="Using MERN Stack, this project aims to create a interactive online community
         built on the love of Capybaras. Taking inspiration from reddit. Project is currently going underway."
         />
-        <ProjectImage
-          src={capybaraPic}
-          alt="picture of capybaras by the river"
-        />
-        <ProjectImage src={shufflePic} alt="picture of someone shuffling" />
+
         <ProjectCard
+          src={shufflePic}
+          alt="picture of someone shuffling"
           title="ShuffleVT.com"
           description="Bringing my passion for shuffling to life, a webpage featuring 
           dance videos and a call-to-action that motivates fellow hokies to join the club."
         />
+
         <ProjectCard
+          src={iphonePic}
+          alt="picture of a project"
           title="Shuffle Trainer Ios App"
           description="At a fast bpm, dance creativity drops drastically as the human brain 
           prioritizes the most efficient dance moves. This limits the variety of moves a user 
           can do leading to a stale freestyle dance. This app hopes to assist with that by 
           providing a deck of moves that 'shuffles' what move the user should do next."
         />
-        <ProjectImage src={iphonePic} alt="picture of a project" />
       </div>
     </section>
   );
 }
 
-function ProjectCard({ title, description }) {
+function ProjectCard({ title, description, src, alt }) {
   return (
     <div className="project-card">
-      <h3>{title}</h3>
+      <div className="project-info">
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
 
-      <p>{description}</p>
+      <ProjectImage src={src} alt={alt} />
     </div>
   );
 }
 
 function ProjectImage({ src, alt }) {
   return (
-    <div>
+    <div className="image-container">
       <img className="project-img" src={src} alt={alt} />
+      <p className="hover-text">Check out on GitHub</p>
     </div>
   );
 }

@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className="main-header">
       <Link className="nav-link" to="/">
@@ -29,13 +36,17 @@ function Header() {
           AdamNguyen.Dev
         </div>
       </Link>
-      <NavBar />
+      <button className="menu-icon" onClick={toggleMenu}>
+        Menu
+      </button>
+      <NavBar isOpen={isOpen} />
     </header>
   );
 }
-function NavBar() {
+
+function NavBar({ isOpen }) {
   return (
-    <nav className="main-nav">
+    <nav className={`main-nav ${isOpen ? "open" : ""}`}>
       <Link className="nav-link" to="/">
         Home
       </Link>
@@ -51,4 +62,5 @@ function NavBar() {
     </nav>
   );
 }
+
 export default Header;
