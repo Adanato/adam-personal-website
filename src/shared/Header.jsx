@@ -61,8 +61,8 @@ function NavBar({ isOpen }) {
       <Link className="nav-link" to="/contact">
         Contact
       </Link>
-      <Link className="nav-link nav-contact-button" to="/capybaras">
-        Capybara
+      <Link className="nav-link nav-contact-button" to="/resume">
+        Resume
       </Link>
     </nav>
   );
