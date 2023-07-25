@@ -1,4 +1,5 @@
-import React from "react";
+import PropTypes from "prop-types";
+
 import file from "../assets/Headshot_Placeholder.jpg";
 
 // SVG file imports
@@ -35,7 +36,7 @@ function HeroSection() {
           <p className="hero-paragraph">
             A Computer Science Sophomore at Virginia Tech, with hands-on
             experience in JavaScript, HTML, CSS and web development frameworks.
-            I've built multiple web projects, including my portfolio and a
+            I&aposve built multiple web projects, including my portfolio and a
             capybara-themed social media site. Beyond coding, I spend time
             practicing new dance moves for my Shuffling Club.
           </p>
@@ -132,8 +133,13 @@ function FeaturedProjects() {
     </section>
   );
 }
-
-function ProjectCard({ title, description, src, alt, github }) {
+ProjectCard.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  src: PropTypes.string,
+  alt: PropTypes.string,
+};
+function ProjectCard({ title, description, src, alt }) {
   return (
     <div className="project-card">
       <ProjectImage src={src} alt={alt} />
@@ -144,15 +150,15 @@ function ProjectCard({ title, description, src, alt, github }) {
 
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="ionicon"
+        className="ionicon"
         viewBox="0 0 512 512"
       >
         <path
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="48"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="48"
           d="M184 112l144 144-144 144"
         />
       </svg>
@@ -160,6 +166,10 @@ function ProjectCard({ title, description, src, alt, github }) {
   );
 }
 
+ProjectImage.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+};
 function ProjectImage({ src, alt }) {
   return (
     <div className="image-container">

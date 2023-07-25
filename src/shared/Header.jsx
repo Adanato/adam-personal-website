@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,14 +23,14 @@ function Header() {
           >
             <defs>
               <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#3b5bdb" />
-                <stop offset="100%" stop-color="#845ef7" />
+                <stop offset="0%" stopColor="#3b5bdb" />
+                <stop offset="100%" stopColor="#845ef7" />
               </linearGradient>
             </defs>
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
             />
           </svg>
@@ -44,6 +45,10 @@ function Header() {
   );
 }
 
+NavBar.propTypes = {
+  isOpen: PropTypes.bool,
+};
+
 function NavBar({ isOpen }) {
   return (
     <nav className={`main-nav ${isOpen ? "open" : ""}`}>
@@ -56,8 +61,8 @@ function NavBar({ isOpen }) {
       <Link className="nav-link" to="/contact">
         Contact
       </Link>
-      <Link className="nav-link nav-contact-button" to="/resume">
-        Resume
+      <Link className="nav-link nav-contact-button" to="/capybaras">
+        Capybara
       </Link>
     </nav>
   );
