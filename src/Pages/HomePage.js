@@ -73,13 +73,16 @@ function Skills() {
             CSS
           </li>
           <li>
-            <img src={javaSvg} alt="java SVG logo" /> Java
+            <img src={javaSvg} alt="java SVG logo" />
+            Java
           </li>
           <li>
-            <img src={pythonSvg} alt="python SVG logo" /> Python
+            <img src={pythonSvg} alt="python SVG logo" />
+            Python
           </li>
           <li>
-            <img src={mongoSvg} alt="mongo SVG logo" /> MongoDB
+            <img src={mongoSvg} alt="mongo SVG logo" />
+            MongoDB
           </li>
         </ul>
       </div>
