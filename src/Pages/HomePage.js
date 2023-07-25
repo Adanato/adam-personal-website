@@ -1,18 +1,18 @@
 import React from "react";
-import file from "../Public/Headshot_Placeholder.jpg";
+import file from "../assets/Headshot_Placeholder.jpg";
 
 // SVG file imports
-import htmlSvg from "../Public/html.svg";
-import cssSvg from "../Public/css3.svg";
-import jsSvg from "../Public/javascript.svg";
-import javaSvg from "../Public/java.svg";
-import pythonSvg from "../Public/python.svg";
-import mongoSvg from "../Public/mongodb.svg";
+import htmlSvg from "../assets/html.svg";
+import cssSvg from "../assets/css3.svg";
+import jsSvg from "../assets/javascript.svg";
+import javaSvg from "../assets/java.svg";
+import pythonSvg from "../assets/python.svg";
+import mongoSvg from "../assets/mongodb.svg";
 
 // Picture imports personal project
-import capybaraPic from "../Public/capybara.jpg";
-import shufflePic from "../Public/dancing.jpg";
-import iphonePic from "../Public/iphone.jpg";
+import capybaraPic from "../assets/capybara.jpg";
+import shufflePic from "../assets/dancing.jpg";
+import iphonePic from "../assets/iphone.jpg";
 function HomePage() {
   return (
     <>
@@ -94,47 +94,65 @@ function Skills() {
 function FeaturedProjects() {
   return (
     <section className="section-projects">
-      <h2>Personal projects</h2>
       <div className="projects-container">
-        <ProjectCard
-          src={capybaraPic}
-          alt="picture of capybaras by the river"
-          title="CapybaraSpace.com"
-          description="Using MERN Stack, this project aims to create a interactive online community
-        built on the love of Capybaras. Taking inspiration from reddit. Project is currently going underway."
-        />
-
-        <ProjectCard
-          src={shufflePic}
-          alt="picture of someone shuffling"
-          title="ShuffleVT.com"
-          description="Bringing my passion for shuffling to life, a webpage featuring 
-          dance videos and a call-to-action that motivates fellow hokies to join the club."
-        />
-
-        <ProjectCard
-          src={iphonePic}
-          alt="picture of a project"
-          title="Shuffle Trainer Ios App"
-          description="At a fast bpm, dance creativity drops drastically as the human brain 
-          prioritizes the most efficient dance moves. This limits the variety of moves a user 
-          can do leading to a stale freestyle dance. This app hopes to assist with that by 
-          providing a deck of moves that 'shuffles' what move the user should do next."
-        />
+        <h2 className="project-h2">Personal projects</h2>
+        <div className="card-container">
+          <a href="https://github.com/Adanato/capybara-space-socialmedia">
+            <ProjectCard
+              src={capybaraPic}
+              alt="picture of capybaras by the river"
+              title="CapybaraSpace.com"
+              description="Using MERN Stack, this project aims to create a interactive online community
+            built on the love of Capybaras. Taking inspiration from reddit. Project is currently going underway."
+            />
+          </a>
+          <a href="{}">
+            <ProjectCard
+              src={shufflePic}
+              alt="picture of someone shuffling"
+              title="ShuffleVT.com"
+              description="Bringing my passion for shuffling to life, a webpage featuring 
+          dance videos and a call-to-action that motivates fellow hokies to join the club. Hosted on Digital ocean"
+            />
+          </a>
+          <a href="https://github.com/Adanato/ShuffleTrainerIOS">
+            <ProjectCard
+              src={iphonePic}
+              alt="picture of a project"
+              title="Shuffle Trainer IOS App"
+              description="This app combats reduced dance creativity at high BPM by shuffling 
+            a deck of suggested dance moves, helping to keep freestyle dances fresh and varied."
+            />
+          </a>
+        </div>
       </div>
     </section>
   );
 }
 
-function ProjectCard({ title, description, src, alt }) {
+function ProjectCard({ title, description, src, alt, github }) {
   return (
     <div className="project-card">
+      <ProjectImage src={src} alt={alt} />
       <div className="project-info">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
 
-      <ProjectImage src={src} alt={alt} />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="ionicon"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="48"
+          d="M184 112l144 144-144 144"
+        />
+      </svg>
     </div>
   );
 }
