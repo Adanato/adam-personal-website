@@ -169,7 +169,9 @@ a {
 }
 
 .hero-img {
-  width: 50%;
+  max-width: 30rem;
+  width: 100%;
+  height: auto;
   border-radius: 50%;
   justify-self: center;
 }
@@ -235,9 +237,8 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 60rem;
 
+  margin: 0 auto;
   gap: 8rem;
-
-  padding: 4.8rem;
 }
 .project-card {
   background-color: white;
@@ -264,6 +265,7 @@ a {
 .project-h2 {
   color: #edf2ff;
   text-align: center;
+  margin-bottom: 3.6rem;
 }
 .image-container {
   position: relative;
@@ -320,23 +322,35 @@ a {
   color: #fff;
 }
 
-@media screen and (max-width: 600px) {
-  .hero-content {
-    max-width: 60rem;
-  }
-  .skill-list {
-    max-width: 60rem;
-  }
-  .projects-container {
-    max-width: 130rem;
-  }
-}
-
 /* Mobile view */
 .menu-icon {
   display: none;
 }
 
+@media screen and (max-width: 1450px) {
+  .card-container {
+    grid-template-columns: 45rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    max-width: 45rem;
+  }
+  .skill-list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .skills-container {
+    max-width: 90rem;
+  }
+  .hero-container {
+    max-width: 90rem;
+  }
+  .hero-content {
+    gap: 1.6rem;
+  }
+  .hero-paragraph {
+    line-height: 3rem;
+  }
+}
 @media screen and (max-width: 964px) {
   .main-nav {
     display: none;
@@ -351,12 +365,54 @@ a {
 .main-nav.open {
   display: flex;
 }
-
+/* Order matters for media queries */
 @media screen and (max-width: 685px) {
+  html {
+    font-size: 8px;
+  }
   .main-header {
     font-size: 2.4rem;
   }
   .header-container {
     gap: 1.2rem;
+  }
+  .hero-container {
+    grid-template-columns: 1fr;
+    max-width: 50rem;
+    gap: 4.8rem;
+  }
+  h1 {
+    font-size: 3.6rem;
+  }
+  .skills-container {
+    max-width: 50rem;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  .footer span {
+    order: -1; /* first item will now be last */
+  }
+  .hero-img {
+    max-width: 25rem;
+    order: -1;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero-content {
+    max-width: 60rem;
+  }
+  .skill-list {
+    max-width: 60rem;
+  }
+  .projects-container {
+    max-width: 130rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .card-container {
+    max-width: 20rem;
   }
 }
