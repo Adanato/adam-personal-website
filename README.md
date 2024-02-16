@@ -1,8 +1,11 @@
-# React + Vite
+# [adam-personal-website] - Archived
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for an older version of [Adamnguyen.dev]. It is no longer actively maintained as I have developed a new version.
 
-Currently, two official plugins are available:
+## :sparkles: Check Out the New Version
+For the latest features, improvements, and updates, please visit the new repository at:
+- [adam-personal-website_v2](https://github.com/Adanato/adam_personal_website_v2)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The new version offers an updated CSS design, better page layout, and utilizes NextJS for faster computing.
+
+
